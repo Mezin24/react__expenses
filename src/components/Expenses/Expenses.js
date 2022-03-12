@@ -1,5 +1,6 @@
 import React from 'react';
 import ExpenseItem from './ExpenseItem';
+import Card from '../UI/Card';
 import './Expenses.css';
 
 export default function Expenses({ expenses }) {
@@ -7,5 +8,5 @@ export default function Expenses({ expenses }) {
     <ExpenseItem expense={expense} key={expense.id} />
   ));
 
-  return <div className="expenses">{expensesEls}</div>;
+  return <Card className="expenses">{expensesEls}</Card>;
 }
