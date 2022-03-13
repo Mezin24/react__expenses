@@ -3,10 +3,10 @@ import NewExpenseForm from './NewExpenseForm';
 import Card from '../UI/Card';
 import './NewExpense.css';
 
-export default function NewExpense() {
+export default function NewExpense(props) {
   return (
     <Card className='new-expense'>
-      <NewExpenseForm />
+      <NewExpenseForm addExpense={props.addExpense} />
     </Card>
   );
 }
