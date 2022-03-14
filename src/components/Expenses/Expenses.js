@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import ExpenseItem from './ExpenseItem';
+
 import ExpensesFilter from '../Filter/ExpenseFilter';
+import ExpensesList from './ExpensesList';
 import Card from '../UI/Card';
 import './Expenses.css';
 
 export default function Expenses({ expenses }) {
   const [currentYear, setCurrentYear] = useState(2022);
 
-  const expensesEls = expenses
-    .filter((expense) => expense.date.getFullYear() === currentYear)
-    .map((expense) => <ExpenseItem expense={expense} key={expense.id} />);
+  // const expensesEls = expenses
+  //   .filter((expense) => expense.date.getFullYear() === currentYear)
+  //   .map((expense) => <ExpenseItem expense={expense} key={expense.id} />);
 
   return (
     <Card className='expenses'>
@@ -17,7 +18,7 @@ export default function Expenses({ expenses }) {
         selected={currentYear}
         onSetYear={(year) => setCurrentYear(year)}
       />
-      {expensesEls}
+      <ExpensesList expenses={expenses} currentYear={currentYear} />
     </Card>
   );
 }
