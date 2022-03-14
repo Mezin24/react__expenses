@@ -1,13 +1,13 @@
 .new-expense {
-    background-color: #a892ee;
-    padding: 1rem;
-    margin: 2rem auto;
-    width: 50rem;
-    max-width: 95%;
-    text-align: center;
-  }
-  
-  .new-expense button {
+  background-color: #a892ee;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  text-align: center;
+}
+
+/* .new-expense button {
     font: inherit;
     cursor: pointer;
     padding: 1rem 2rem;
@@ -32,4 +32,4 @@
   .new-expense button.alternative:hover,
   .new-expense button.alternative:active {
     background-color: #ddb3f8;
-  }
+  } */
